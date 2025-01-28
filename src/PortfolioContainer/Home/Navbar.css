@@ -1,0 +1,23 @@
+
+.my-navbar {
+    background-color: #f8f9fa; 
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .my-navbar.scrolled {
+    background-color: #343a40; 
+  }
+  
+  .my-navbar .navbar-link {
+    color: #000; 
+    text-decoration: none;
+  }
+  
+  .my-navbar .navbar-link.active {
+    color: #007bff; 
+  }
+  
+  .my-navbar .navbar-link:hover {
+    color: #0056b3; 
+  }
+  

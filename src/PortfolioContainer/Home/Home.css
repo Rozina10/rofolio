@@ -1,0 +1,10 @@
+.home-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  height: 88vh !important;
+    min-height: 670px;
+    background-image: url('https://wallpaperaccess.com/full/1489187.jpg');
+    /* background-image: url('../../assets/Home/bg.jpeg'); */
+    
+}

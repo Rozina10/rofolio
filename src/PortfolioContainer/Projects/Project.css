@@ -1,0 +1,72 @@
+
+.project {
+    background: black;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .project h2 {
+    color:orange;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .project p {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+ 
+  .project-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .proj-imgbx {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 4px 15px orange
+  }
+ 
+  .proj-imgbx img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .proj-imgbx:hover {
+    transform: scale(1.05);
+  }
+  
+  .proj-imgbx:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+  }
+  
+ 
+  .proj-txtx {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: orange; 
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+  }
+  
+  .proj-imgbx:hover .proj-txtx {
+    opacity: 0.7;
+  }
+  

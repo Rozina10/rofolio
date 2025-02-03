@@ -1,9 +1,12 @@
-
+import "./navbar.css";
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
+
 export const NavbarComponent = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const path = window.path
+
 
   useEffect(() => {
     const onScroll = () => {
@@ -12,18 +15,34 @@ export const NavbarComponent = () => {
       } else {
         setScrolled(false);
       }
+      
+      const sections = document.querySelectorAll("section");
+      sections.forEach((section) => {
+        const top = section.offsetTop - 88; 
+        const bottom = top + section.offsetHeight;
+        if(window.scrollY === 0) {
+          setActiveLink("home");
+        }
+        else if (window.scrollY >= top && window.scrollY < bottom) {
+          setActiveLink(section.getAttribute("id"));
+        }
+      });
     };
 
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const onUpdateActiveLink = (value) => {
-    setActiveLink(value);
+  const handleLetsConnect = (url) => {
+    window.open(url, "_blank");
   };
 
   return (
-    <Navbar expand="lg" className={`my-navbar ${scrolled ? "scrolled" : ""}`}>
+    <Navbar
+      expand="lg"
+      fixed="top"
+      className={`my-navbar ${scrolled ? "scrolled" : ""}`}
+    >
       <Container>
         <Navbar.Brand href="#home">
           <h1>Rozfolio</h1>
@@ -34,43 +53,31 @@ export const NavbarComponent = () => {
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link
-              href="#home"
-              className={
-                activeLink === "home" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("home")}
-            >
-              Home
-            </Nav.Link>
-            <Nav.Link
-              href="#skills"
-              className={
-                activeLink === "skills" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("skills")}
-            >
-              Skills
-            </Nav.Link>
-            <Nav.Link
-              href="#projects"
-              className={
-                activeLink === "projects" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("projects")}
-            >
-              Projects
-            </Nav.Link>
-            <Nav.Link
-              href="#contact"
-              className={
-                activeLink === "contact" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("contact")}
-            >
-              Contact
-            </Nav.Link>
+            {["home", "skills", "projects", "contact"].map((section) => (
+              <Nav.Link
+                key={section}
+                href={`#${section}`}
+                className={
+                  activeLink === section ? "active navbar-link" : "navbar-link"
+                }
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </Nav.Link>
+            ))}
           </Nav>
+          <span className="navbar-text">
+            <button
+              className="vvd"
+              onClick={(e) => {
+                e.preventDefault();
+                handleLetsConnect(
+                  "https://www.linkedin.com/in/rozina-mehmood-59a150286/"
+                );
+              }}
+            >
+              <span>Let's Connect</span>
+            </button>
+          </span>
         </Navbar.Collapse>
       </Container>
     </Navbar>

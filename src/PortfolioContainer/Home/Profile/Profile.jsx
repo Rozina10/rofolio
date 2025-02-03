@@ -11,7 +11,7 @@ export default function Profile() {
           <div className="colz">
             <div className="colz-icon">
               <a href="https://www.linkedin.com/in/rozina-mehmood-59a150286/">
-                <i class="fa fa-linkedin"></i>
+                <i className="fa fa-linkedin"></i>
               </a>
               <a href="https://www.youtube.com/@webdevelopergirl">
                 <i className="fa fa-youtube-square"></i>
@@ -51,10 +51,12 @@ export default function Profile() {
             </span>
           </div>
           <div className="profile-options">
+            <a href="https://www.linkedin.com/in/rozina-mehmood-59a150286/">
             <button className="btn primary-btn">
               {""}
               Hire Me{" "}
             </button>
+            </a>
             <a href="Rozina CV.pdf" download="Rozina CV.pdf">
               <button className="btn highlighted-btn">Get Resume</button>
             </a>
@@ -68,3 +70,4 @@ export default function Profile() {
     </div>
   );
 }
+

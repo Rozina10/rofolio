@@ -5,7 +5,7 @@
     justify-content: center;
     height: 10%;
     min-height: fit-content;
-    /* background-image: url('../../assets/Home/bg.jpeg'); */
+    
     background-size: cover;
 }
 .profile-parent{
@@ -41,6 +41,16 @@ font-family: "cursive";
 .highlighted-text{
     color: orangered
 }
+
+.primary-btn {
+color: aliceblue;
+background-color: slategray;
+}
+.primary-btn:hover{
+    background-color: orangered;
+    color:skyblue;
+
+}
 .profile-role-tagline{
     font-size: 19px;
     margin: 5px 0 0 0;
@@ -48,10 +58,11 @@ font-family: "cursive";
 }
 .profile-options .highlighted-btn{
    margin: 0 0 0 28px; 
+background-color: orangered;
 }
 .profile-options .highlighted-btn:hover {
     margin:0 0 0 28px;
-    background-color: cornsilk;
+    background-color: slategray;
     color:111;
 }
 .profile-picture{
@@ -80,6 +91,7 @@ transition: 1s ease-out;
 .colz .colz-icon i{
     color: white;
     padding: 8px;
+    margin-top: 20px;
     padding-left: 0px;
 }
 .colz .colz-icon i:hover{
@@ -144,3 +156,5 @@ margin: 0 !important;
     width: 90%;
 }
 }
+
+

@@ -1,0 +1,138 @@
+/* Contact Section */
+.contact {
+    background-color: #121212;
+    padding: 80px 0;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Section Title */
+  .contact .section-title {
+    font-size: 2.5rem;
+    color: orange; 
+    margin-bottom: 20px;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Paragraph */
+  .contact p {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out 0.5s forwards;
+  }
+  
+  /* Contact Form */
+  .contact .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .contact .contact-input {
+    padding: 15px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: 1px solid orange;
+    background-color: white;
+    color: black;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .contact .contact-input:focus {
+    border-color: #ffb6c1; 
+    box-shadow: orange;
+  }
+  
+  .contact .submit-btn {
+    background-color:linear-gradient(135deg, #ff8a00, #e52e71);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact .submit-btn:hover {
+    background-color: orange;
+  }
+  
+  /* Contact Info */
+  .contact-info {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 10px;
+    animation: slideIn 1.5s ease-in-out 1.5s forwards;
+  }
+  
+  .contact-item {
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideIn 1.5s ease-in-out 2s forwards;
+  }
+  
+  .contact-item h5 {
+    font-size: 1.3rem;
+    color: orange;
+    animation: fadeIn 1s ease-in-out 2s forwards;
+  }
+  
+  .contact-item p {
+    font-size: 1.1rem;
+    color: #bbb;
+    animation: fadeIn 1s ease-in-out 2.5s forwards;
+  }
+  
+  .contact-icon {
+    font-size: 1.5rem;
+    color: orange;
+    margin-right: 10px;
+    animation: fadeIn 1s ease-in-out 2s forwards;
+  }
+  
+  /* Animation Definitions */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Media Query for Responsiveness */
+  @media (max-width: 768px) {
+    .contact-info {
+      margin-top: 20px;
+    }
+  
+    .contact-item {
+      opacity: 1;
+      animation: none;
+    }
+  
+    .contact-item h5, .contact-item p {
+      opacity: 1;
+      animation: none;
+    }
+  }
+  
+  

@@ -5,10 +5,10 @@ import './Home.css'
 
 export default function Home (){
 return (
-    <div className="home-container">
+    <sectoin className="home-container" id="home">
    <Profile/>
    <Footer/>
    
-    </div>
+    </sectoin>
 )
 }

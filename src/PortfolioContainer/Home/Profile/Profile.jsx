@@ -1,5 +1,5 @@
 import React from "react";
-import "./profile.css";
+import "./Profile.css";
 import { TypeAnimation } from "react-type-animation"
 
 export default function Profile() {

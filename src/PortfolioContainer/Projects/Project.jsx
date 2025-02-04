@@ -1,7 +1,7 @@
 
 import { Col, Container, Row } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import "./project.css"; 
+import "./Project.css"; 
 
 import img1 from "../Images/img1.png";
 import img2 from "../Images/img2.png";

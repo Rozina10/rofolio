@@ -1,7 +1,6 @@
 import React from "react";
-import Typical from "react-typical";
 import "./profile.css";
-import  {TypeAnimation} from "react-type-animation"
+import { TypeAnimation } from "react-type-animation"
 
 export default function Profile() {
   return (
@@ -29,7 +28,7 @@ export default function Profile() {
             <span className="primary-text">
               <h1>
                 <TypeAnimation
-                        speed={{ type: 'keyStrokeDelayInMs', value: 60 }}
+                  speed={{ type: 'keyStrokeDelayInMs', value: 60 }}
 
                   repeat={Infinity}
                   sequence={[
@@ -52,10 +51,10 @@ export default function Profile() {
           </div>
           <div className="profile-options">
             <a href="https://www.linkedin.com/in/rozina-mehmood-59a150286/">
-            <button className="btn primary-btn">
-              {""}
-              Hire Me{" "}
-            </button>
+              <button className="btn primary-btn">
+                {""}
+                Hire Me{" "}
+              </button>
             </a>
             <a href="Rozina CV.pdf" download="Rozina CV.pdf">
               <button className="btn highlighted-btn">Get Resume</button>
